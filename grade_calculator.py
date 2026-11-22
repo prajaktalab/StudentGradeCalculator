@@ -23,31 +23,40 @@ def grade(avg):
 def is_pass(marks):
     return all(mark >= 35 for mark in marks)
 
+
+# Feature added in Phase 4
 def highest_mark(marks):
     return max(marks)
 
 
 # Main Program
-print("===== STUDENT GRADE CALCULATOR =====")
+def main():
+    print("===== STUDENT GRADE CALCULATOR =====")
 
-name = input("Enter student name: ")
+    name = input("Enter student name: ")
 
-marks = []
+    marks = []
 
-for i in range(1, 6):
-    mark = float(input(f"Enter marks for subject {i}: "))
-    marks.append(mark)
+    for i in range(1, 6):
+        mark = float(input(f"Enter marks for subject {i}: "))
+        marks.append(mark)
 
-total = sum(marks)
-avg = average(marks)
+    total = sum(marks)
+    avg = average(marks)
 
-print("\n===== STUDENT RESULT =====")
-print("Student Name:", name)
-print("Total Marks:", total)
-print("Average Marks:", round(avg, 2))
-print("Grade:", grade(avg))
-print("Highest Mark:", highest_mark(marks))
-if is_pass(marks):
-    print("Result: PASS")
-else:
-    print("Result: FAIL")
+    print("\n===== STUDENT RESULT =====")
+    print("Student Name:", name)
+    print("Total Marks:", total)
+    print("Average Marks:", round(avg, 2))
+    print("Grade:", grade(avg))
+    print("Highest Marks:", highest_mark(marks))
+
+    if is_pass(marks):
+        print("Result: PASS")
+    else:
+        print("Result: FAIL")
+
+
+# Execute only when the file is run directly
+if __name__ == "__main__":
+    main()

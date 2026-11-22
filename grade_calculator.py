@@ -23,6 +23,9 @@ def grade(avg):
 def is_pass(marks):
     return all(mark >= 35 for mark in marks)
 
+def highest_mark(marks):
+    return max(marks)
+
 
 # Main Program
 print("===== STUDENT GRADE CALCULATOR =====")
@@ -43,7 +46,7 @@ print("Student Name:", name)
 print("Total Marks:", total)
 print("Average Marks:", round(avg, 2))
 print("Grade:", grade(avg))
-
+print("Highest Mark:", highest_mark(marks))
 if is_pass(marks):
     print("Result: PASS")
 else:
